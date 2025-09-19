@@ -7,8 +7,9 @@ pbFetchKommuner.addEventListener("click", actionFetch);
 
 const url = "https://api.dataforsyningen.dk/kommuner";
 
-function fetchKommuner(any) {
-    return fetch(any).then(response => response.json());
+async function fetchKommuner(any) {
+    const response = await fetch(url)
+    return await response.json();
 }
 
 async function actionFetch() {
